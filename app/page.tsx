@@ -45,10 +45,10 @@ export default function Home() {
   }, [lastScrollY, hideTimeout])
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[rgb(235, 240, 225)]">
       {/* Header - L. Montgomery */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 bg-stone-100 border-b border-gray-200"
+        className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 bg-[rgb(240,239,225)] border-b border-gray-200"
         style={{ transform: headerVisible ? "translateY(0)" : "translateY(-100%)" }}
       >
         <div className="container mx-auto flex items-center justify-between px-4 py-10">
@@ -71,7 +71,7 @@ export default function Home() {
             </svg>
           </div>
           <div className="text-center">
-            <h2 className="text-lg font-medium">L. Montgomery</h2>
+            <h2 className="text-lg font-medium">Aatmik Life Studio</h2>
           </div>
           <div>
             <button className="text-gray-700">+Menu</button>
@@ -80,42 +80,61 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-stone-100 py-16 pt-[187px]">
+      <section className="bg-[rgb(240,239,225)] py-16 pt-[187px]">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="flex flex-col justify-center">
-              <h1 className="mb-4 text-6xl font-light tracking-tight">EMPOWER YOUR HEALTH</h1>
-              <p className="mb-8 text-lg">Personalized Wellness Solutions</p>
-              <p className="mb-8 text-sm leading-relaxed">
-                At L. Montgomery, we offer tailored health assessments, nutrition plans, and lifestyle coaching to
-                enhance your overall well-being. Our programs include mindfulness training, stress reduction workshops,
-                and fitness routines customized to suit your individual needs.
-              </p>
-              <div className="flex space-x-4">
-                <button className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100">Explore More</button>
-                <button className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100">Contact us</button>
-              </div>
+          <div className="flex flex-col">
+            <div className="mb-8">
+              <h1 
+                className="mb-4 text-6xl tracking-tight text-center uppercase"
+                style={{
+                  fontFamily: 'cormorantgaramond-light, cormorantgaramond, "cormorant garamond", serif',
+                  letterSpacing: '0.04em',
+                  fontSize: '90px',
+                  fontWeight: '300',
+                  textAnchor: 'middle',
+                  direction: 'ltr',
+                  fill: 'rgb(0, 0, 0)',
+                  textAlign: 'center'
+                }}
+              >
+                EMPOWER YOUR HEALTH
+              </h1>
+              <p className="text-lg text-center">Personalized Wellness Solutions</p>
             </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/placeholder.svg?height=500&width=400"
-                alt="Woman meditating"
-                width={400}
-                height={500}
-                className="rounded-md object-cover"
-              />
+            
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="flex flex-col justify-center">
+                <p className="mb-8 text-sm leading-relaxed">
+                  At L. Montgomery, we offer tailored health assessments, nutrition plans, and lifestyle coaching to
+                  enhance your overall well-being. Our programs include mindfulness training, stress reduction workshops,
+                  and fitness routines customized to suit your individual needs.
+                </p>
+                <div className="flex space-x-4">
+                  <button className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100">Explore More</button>
+                  <button className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100">Contact us</button>
+                </div>
+              </div>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="https://static.wixstatic.com/media/88aac0_4d1b718af78a4dd3b703ec141f7d4f09~mv2.png"
+                  alt="Woman meditating"
+                  width={400}
+                  height={500}
+                  className="rounded-md object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Our Approach */}
-      <section className="bg-stone-100 py-16">
+      <section className="bg-[rgb(240,239,225)] py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
               <Image
-                src="/placeholder.svg?height=500&width=400"
+                src="/IMG_2418.JPEG"
                 alt="Stacked stones"
                 width={400}
                 height={500}
@@ -136,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="bg-stone-100 py-16">
+      <section className="bg-[rgb(240,239,225)] py-16">
         <div className="container mx-auto px-4">
           <h2 className="mb-2 text-4xl font-light">Process</h2>
           <p className="mb-12 text-sm">Simple and Effective</p>
@@ -195,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16">
+      <section className="py-16 bg-[rgb(240,239,225)]">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-4xl font-light">Testimonials</h2>
 
@@ -231,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* Food Image Section */}
-      <section className="py-8">
+      <section className="py-8 bg-[rgb(240,239,225)]">
         <div className="container mx-auto px-4">
           <Image
             src="/placeholder.svg?height=400&width=900"
@@ -244,7 +263,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-stone-100 py-16">
+      <section className="bg-[rgb(240,239,225)] py-16">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-4xl font-light">Frequently Asked Questions</h2>
 
@@ -283,7 +302,7 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16">
+      <section className="py-16 bg-[rgb(240,239,225)]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
@@ -386,7 +405,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-stone-100 py-16">
+      <footer className="bg-[rgb(240,236,228)] py-16">
         <div className="container mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-2xl font-light">L. Montgomery</h2>
