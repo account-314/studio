@@ -22,22 +22,16 @@ export default function Home() {
       // Update last scroll position
       setLastScrollY(currentScrollY)
 
-      // Handle header visibility based on scroll direction
-      if (isScrollingDown) {
-        // When scrolling down, set a timeout to hide the header after a delay
-        if (hideTimeout) clearTimeout(hideTimeout)
-
-        const timeout = setTimeout(() => {
-          setHeaderVisible(false)
-        }, 1000) // 1 second delay
-
-        setHideTimeout(timeout)
-      } else {
-        // When scrolling up, immediately show the header and clear any pending timeout
+      // Hide header immediately when scrolling down
+      if (isScrollingDown && currentScrollY > 700) {
+        setHeaderVisible(false)
+        // Clear any existing timeout
         if (hideTimeout) {
           clearTimeout(hideTimeout)
           setHideTimeout(null)
         }
+      } else if (!isScrollingDown) {
+        // When scrolling up, immediately show the header
         setHeaderVisible(true)
       }
     }
@@ -52,85 +46,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
+      {/* Header - L. Montgomery */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 bg-white border-b border-gray-200"
+        className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 bg-stone-100 border-b border-gray-200"
         style={{ transform: headerVisible ? "translateY(0)" : "translateY(-100%)" }}
       >
-        <div className="container mx-auto flex items-center justify-between px-4 py-3">
-          <div className="flex items-center">
-            <div className="text-2xl font-bold">WIX</div>
-            <div className="ml-4 flex items-center text-sm">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="mr-1"
-              >
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-              <span>Back to Templates</span>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="mr-4 flex items-center">
-              <button className="mx-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>
-              </button>
-              <button className="mx-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                  <line x1="12" y1="18" x2="12.01" y2="18" />
-                </svg>
-              </button>
-            </div>
-            <div className="flex items-center">
-              <span className="mr-4 text-sm">Click edit and create your own amazing website</span>
-              <Link href="#" className="mr-2 text-sm text-gray-600 hover:underline">
-                Read More
-              </Link>
-              <button className="rounded bg-blue-600 px-4 py-1 text-sm text-white">Edit this site</button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Spacer to prevent content from being hidden under fixed header */}
-      <div className="h-[57px]"></div>
-
-      {/* Main Navigation */}
-      <nav className="bg-stone-100 py-6">
-        <div className="container mx-auto flex items-center justify-between px-4">
+        <div className="container mx-auto flex items-center justify-between px-4 py-10">
           <div>
             <svg
               width="24"
@@ -156,10 +77,10 @@ export default function Home() {
             <button className="text-gray-700">+Menu</button>
           </div>
         </div>
-      </nav>
+      </header>
 
       {/* Hero Section */}
-      <section className="bg-stone-100 py-16">
+      <section className="bg-stone-100 py-16 pt-[187px]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="flex flex-col justify-center">
