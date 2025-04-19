@@ -257,13 +257,13 @@ export default function Home() {
 
       {/* Food Image Section */}
       <section className="py-8 bg-[rgb(240,239,225)]">
-        <div className="container mx-auto px-4">
+        <div className="w-full">
           <Image
-            src="/placeholder.svg?height=400&width=900"
+            src="/pexels-yaroslav-shuraev-4938111.jpg"
             alt="Healthy food display"
-            width={900}
-            height={400}
-            className="w-full object-cover"
+            width={1920}
+            height={1080}
+            className="w-full h-screen object-cover"
           />
         </div>
       </section>
@@ -308,67 +308,59 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-[rgb(240,239,225)]">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-[rgb(240,239,225)] relative">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/pexels-taryn-elliott-7565936.jpg"
+            alt="Fruit bowl background"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <h2 className="mb-4 text-4xl font-light" style={headingStyle}>Leave Us a Message and We'll Get Back to You</h2>
-              <div className="mt-8 flex flex-wrap">
-                <Image
-                  src="/placeholder.svg?height=250&width=250"
-                  alt="Fruit bowl"
-                  width={250}
-                  height={250}
-                  className="mb-4 mr-4 object-cover"
-                />
-                <Image
-                  src="/placeholder.svg?height=150&width=200"
-                  alt="Tea cup"
-                  width={200}
-                  height={150}
-                  className="object-cover"
-                />
-              </div>
+              <h2 className="mb-4 text-4xl font-light text-[rgb(240,239,225)]" style={headingStyle}>Leave Us a Message and We'll Get Back to You</h2>
             </div>
             <div>
               <form className="space-y-4">
                 <div>
-                  <label htmlFor="firstName" className="mb-1 block text-sm">
+                  <label htmlFor="firstName" className="mb-1 block text-sm text-[rgb(240,239,225)]">
                     First name *
                   </label>
                   <input
                     type="text"
                     id="firstName"
-                    className="w-full border-b border-gray-300 py-2 focus:border-gray-500 focus:outline-none"
+                    className="w-full border-b border-[rgb(240,239,225)] bg-transparent py-2 text-[rgb(240,239,225)] placeholder-[rgb(240,239,225)] focus:border-[rgb(240,239,225)] focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="mb-1 block text-sm">
+                  <label htmlFor="lastName" className="mb-1 block text-sm text-[rgb(240,239,225)]">
                     Last name *
                   </label>
                   <input
                     type="text"
                     id="lastName"
-                    className="w-full border-b border-gray-300 py-2 focus:border-gray-500 focus:outline-none"
+                    className="w-full border-b border-[rgb(240,239,225)] bg-transparent py-2 text-[rgb(240,239,225)] placeholder-[rgb(240,239,225)] focus:border-[rgb(240,239,225)] focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="mb-1 block text-sm">
+                  <label htmlFor="email" className="mb-1 block text-sm text-[rgb(240,239,225)]">
                     Email *
                   </label>
                   <input
                     type="email"
                     id="email"
-                    className="w-full border-b border-gray-300 py-2 focus:border-gray-500 focus:outline-none"
+                    className="w-full border-b border-[rgb(240,239,225)] bg-transparent py-2 text-[rgb(240,239,225)] placeholder-[rgb(240,239,225)] focus:border-[rgb(240,239,225)] focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="mb-1 block text-sm">
+                  <label htmlFor="phone" className="mb-1 block text-sm text-[rgb(240,239,225)]">
                     Phone
                   </label>
                   <div className="flex items-center">
-                    <div className="mr-2 flex items-center border-b border-gray-300">
-                      <span className="text-sm">+1</span>
+                    <div className="mr-2 flex items-center border-b border-[rgb(240,239,225)]">
+                      <span className="text-sm text-[rgb(240,239,225)]">+1</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -379,7 +371,7 @@ export default function Home() {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="ml-1"
+                        className="ml-1 text-[rgb(240,239,225)]"
                       >
                         <polyline points="6 9 12 15 18 9" />
                       </svg>
@@ -387,21 +379,21 @@ export default function Home() {
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full border-b border-gray-300 py-2 focus:border-gray-500 focus:outline-none"
+                      className="w-full border-b border-[rgb(240,239,225)] bg-transparent py-2 text-[rgb(240,239,225)] placeholder-[rgb(240,239,225)] focus:border-[rgb(240,239,225)] focus:outline-none"
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="message" className="mb-1 block text-sm">
+                  <label htmlFor="message" className="mb-1 block text-sm text-[rgb(240,239,225)]">
                     Message
                   </label>
                   <textarea
                     id="message"
                     rows={4}
-                    className="w-full border-b border-gray-300 py-2 focus:border-gray-500 focus:outline-none"
+                    className="w-full border-b border-[rgb(240,239,225)] bg-transparent py-2 text-[rgb(240,239,225)] placeholder-[rgb(240,239,225)] focus:border-[rgb(240,239,225)] focus:outline-none"
                   ></textarea>
                 </div>
-                <button type="submit" className="w-full bg-gray-300 py-3 text-center text-sm hover:bg-gray-400">
+                <button type="submit" className="w-full border border-[rgb(240,239,225)] py-3 text-center text-sm text-[rgb(240,239,225)] hover:bg-[rgb(240,239,225)] hover:text-gray-800">
                   Submit
                 </button>
               </form>
