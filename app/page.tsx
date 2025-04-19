@@ -44,6 +44,12 @@ export default function Home() {
     }
   }, [lastScrollY, hideTimeout])
 
+  // Create a reusable style object for the headings
+  const headingStyle = {
+    fontFamily: 'cormorantgaramond-light, cormorantgaramond, "cormorant garamond", serif',
+    fontWeight: '300',
+  }
+
   return (
     <div className="min-h-screen bg-[rgb(235, 240, 225)]">
       {/* Header - L. Montgomery */}
@@ -118,8 +124,8 @@ export default function Home() {
                 <Image
                   src="https://static.wixstatic.com/media/88aac0_4d1b718af78a4dd3b703ec141f7d4f09~mv2.png"
                   alt="Woman meditating"
-                  width={400}
-                  height={500}
+                  width={800}
+                  height={600}
                   className="rounded-md object-cover"
                 />
               </div>
@@ -136,13 +142,13 @@ export default function Home() {
               <Image
                 src="/IMG_2418.JPEG"
                 alt="Stacked stones"
-                width={400}
-                height={500}
+                width={800}
+                height={600}
                 className="rounded-md object-cover"
               />
             </div>
             <div className="flex flex-col justify-center">
-              <h2 className="mb-4 text-4xl font-light">About Our Approach</h2>
+              <h2 className="mb-4 text-4xl font-light" style={headingStyle}>About Our Approach</h2>
               <p className="mb-2 text-lg">Our Vision</p>
               <p className="text-sm leading-relaxed">
                 At L. Montgomery, our mission is to redefine wellness by providing comprehensive consultancy services
@@ -157,7 +163,7 @@ export default function Home() {
       {/* Process Section */}
       <section className="bg-[rgb(240,239,225)] py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-2 text-4xl font-light">Process</h2>
+          <h2 className="mb-2 text-4xl font-light" style={headingStyle}>Process</h2>
           <p className="mb-12 text-sm">Simple and Effective</p>
 
           <div className="mb-12">
@@ -216,7 +222,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-16 bg-[rgb(240,239,225)]">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-4xl font-light">Testimonials</h2>
+          <h2 className="mb-12 text-4xl font-light" style={headingStyle}>Testimonials</h2>
 
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
             <div></div>
@@ -265,7 +271,7 @@ export default function Home() {
       {/* FAQ Section */}
       <section className="bg-[rgb(240,239,225)] py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-4xl font-light">Frequently Asked Questions</h2>
+          <h2 className="mb-12 text-4xl font-light" style={headingStyle}>Frequently Asked Questions</h2>
 
           <div className="mb-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -306,7 +312,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <h2 className="mb-4 text-4xl font-light">Leave Us a Message and We'll Get Back to You</h2>
+              <h2 className="mb-4 text-4xl font-light" style={headingStyle}>Leave Us a Message and We'll Get Back to You</h2>
               <div className="mt-8 flex flex-wrap">
                 <Image
                   src="/placeholder.svg?height=250&width=250"
@@ -408,7 +414,7 @@ export default function Home() {
       <footer className="bg-[rgb(240,236,228)] py-16">
         <div className="container mx-auto px-4">
           <div className="mb-12">
-            <h2 className="text-2xl font-light">L. Montgomery</h2>
+            <h2 className="text-2xl font-light" style={headingStyle}>L. Montgomery</h2>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
