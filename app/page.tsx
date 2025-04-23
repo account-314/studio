@@ -77,7 +77,7 @@ export default function Home() {
             </svg>
           </div>
           <div className="text-center">
-            <h2 className="text-lg font-medium">Aatmik Life Studio</h2>
+            <h2 className="text-lg" style={headingStyle}>Aatmik Life Studio</h2>
           </div>
           <div>
             <button className="text-gray-700">+Menu</button>
@@ -120,13 +120,13 @@ export default function Home() {
                   <button className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100">Contact us</button>
                 </div>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center h-[800px]">
                 <Image
-                  src="https://static.wixstatic.com/media/88aac0_4d1b718af78a4dd3b703ec141f7d4f09~mv2.png"
+                  src="/pexels-olia-danilevich-8964938.jpg"
                   alt="Woman meditating"
-                  width={800}
+                  width={300}
                   height={600}
-                  className="rounded-md object-cover"
+                  className="rounded-md object-cover rotate-90 w-full h-[600px]"
                 />
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* About Our Approach */}
-      <section className="bg-[rgb(240,239,225)] py-16">
+      <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
@@ -220,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-[rgb(240,239,225)]">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-4xl font-light" style={headingStyle}>Testimonials</h2>
 
@@ -229,41 +229,55 @@ export default function Home() {
             <div className="space-y-12">
               <div>
                 <p className="mb-2 text-sm italic leading-relaxed">
-                  "John's guidance and support have been invaluable in my wellness journey. His personalized approach
-                  and genuine care have truly made a difference in my life."
+                  "I am Vishal Narang, owner of Industrial Switchgears, an electrical goods trading firm operating in Gurgaon since last 29 years.
+
+                    I would like to take this opportunity to acknowledge Ms Sushma Malik from Aatmik Life Studio.
+
+                    I recommended her to my brother in law Mr Geet to provide an immediate therapy for his severe high blood pressure problem & we were happily astonished to see great result. She even attended him during odd hours that too when he collapsed & was being taken to doctor. In my brother in law's words she is very knowledgeable and compassionate.
+
+                    I wholeheartedly recommend her for highly effective therapy and yoga sessions.
+
+                    </p>
+                    <p className="mb-2 text-sm italic leading-relaxed">
+                    Regards"
                 </p>
-                <p className="text-sm">Samantha</p>
+                <p className="text-sm">Vishal Narang</p>
               </div>
 
               <div>
                 <p className="mb-2 text-sm italic leading-relaxed">
-                  "I highly recommend L. Montgomery for their exceptional services. Their dedication to holistic
-                  well-being has transformed my perspective on health and lifestyle."
+                  "Dear Sushma, </p>
+
+                  <p  className="mb-2 text-sm italic leading-relaxed">
+
+                    When I joined your yoga class in September, I was having slight backpain, general lethargy, severe PMS and I was finding it particularly hard to concentrate on my studies. Seven months have passed since then and I am delighted to accept that all the above-mentioned problems have waned. It is difficult to describe your dedication towards your students in words. You not only design classes to ensure general well-being of the attendees but you meticulously teach variations of the asanas as per individual’s limitations/problems. Your eagerness to teach asanas and pranayam with correct technique and your insistence on correct posture has spilled positivity beyond the class as well. Now in my daily routine I keep in mind to breathe properly and to maintain good posture. Your instructions about good food habits have also proven to be extremely beneficial. Your subtle but firm way of assertion makes it possible for your students to follow you willingly, for coercion is not what you adhere to. Your positivity, patient persona and calming voice help immensely in concentrating in the yoga class with equal fervor on a daily basis.
+
+                    Best wishes for your future endeavours Sushma. I hope a lot of people benefit from your passion to spread the knowledge of yoga and your enthusiasm to usher in good health to people around you.</p>
+                    <p className="mb-2 text-sm italic leading-relaxed">
+                    All the very best! </p>
+                    <p className="mb-2 text-sm italic leading-relaxed">
+
+                    Warm regards"
                 </p>
-                <p className="text-sm">David</p>
+                <p className="text-sm">Anu Choudhury</p>
+                <p className="text-sm">Research Scholar, Centre for the Study of Law and Governance</p>
+                <p className="text-sm">Jawaharlal Nehru University</p>
               </div>
 
-              <div>
-                <p className="mb-2 text-sm italic leading-relaxed">
-                  "The team at L. Montgomery is exceptional. Their expertise and genuine interest in supporting their
-                  clients are truly commendable."
-                </p>
-                <p className="text-sm">Emily</p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Food Image Section */}
-      <section className="py-8 bg-[rgb(240,239,225)]">
-        <div className="w-full">
+      <section className="bg-[rgb(240,239,225)]">
+        <div className="w-full h-screen">
           <Image
             src="/pexels-yaroslav-shuraev-4938111.jpg"
             alt="Healthy food display"
             width={1920}
             height={1080}
-            className="w-full h-screen object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
       </section>
