@@ -52,35 +52,26 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[rgb(235, 240, 225)]">
-      {/* Header - L. Montgomery */}
+      {/* Header */}
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 bg-[rgb(240,239,225)] border-b border-gray-200"
         style={{ transform: headerVisible ? "translateY(0)" : "translateY(-100%)" }}
       >
         <div className="container mx-auto flex items-center justify-between px-4 py-10">
           <div>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <Image
+              src="/icon.png"
+              alt="icon"
+              width={64}
+              height={64}
               className="text-gray-700"
-            >
-              <path
-                d="M12 2L15 8L21 9L16.5 14L18 20L12 17L6 20L7.5 14L3 9L9 8L12 2Z"
-                stroke="currentColor"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            />
           </div>
           <div className="text-center">
             <h2 className="text-lg" style={headingStyle}>Aatmik Life Studio</h2>
           </div>
           <div>
-            <button className="text-gray-700">+Menu</button>
+            {/* <button className="text-gray-700">+Menu</button> */}
           </div>
         </div>
       </header>
@@ -111,9 +102,11 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="flex flex-col justify-center">
                 <p className="mb-8 text-sm leading-relaxed">
-                  At L. Montgomery, we offer tailored health assessments, nutrition plans, and lifestyle coaching to
-                  enhance your overall well-being. Our programs include mindfulness training, stress reduction workshops,
-                  and fitness routines customized to suit your individual needs.
+                  We as humans always want to grow and move forward in our lives. We all have different areas of life like health, wealth, relationships, social life, dreams, spirituality, joy etc. that are important to us, when we balance these areas it gives real purpose to life. However, the everyday pressures of modern life and our past and future worries frequently trap us in a never-ending cycle of stress and purposelessness.
+                  In this retreat, you will not only learn various aspects of life but also perform some exercises or techniques that will help you to come out from the situation whenever you feel stuck.
+                  Our experienced instructors and wellness experts will lead you through energizing activities, yoga sessions, and nutritionally balanced meals designed to nourish your body and increase your vitality.
+                  Your mental health is as vital as your physical health. Our mindfulness and meditation programs are designed to help you find inner peace, reduce stress, and enhance your emotional resilience. Through guided practices, you'll learn how to quiet the mind, achieve mental clarity, and cultivate a positive mindset.
+                  We believe that connecting with your inner self is essential for a balanced and fulfilling life. Our spiritual guidance and contemplative sessions will help you explore your spiritual dimension, nurturing a sense of purpose, inner strength, and tranquility.
                 </p>
                 <div className="flex space-x-4">
                   <button className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100">Explore More</button>
@@ -134,7 +127,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Our Approach */}
+      {/* Meet your guide */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -148,12 +141,18 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col justify-center">
-              <h2 className="mb-4 text-4xl font-light" style={headingStyle}>About Our Approach</h2>
-              <p className="mb-2 text-lg">Our Vision</p>
+              <h2 className="mb-4 text-4xl font-light" style={headingStyle}>Meet your guide</h2>
+              <p className="mb-2 text-lg">Mrs Sushma Malik</p>
+              <p className="mb-4 text-sm leading-relaxed">
+                I'm an internationally certified yoga instructor, I blend traditional yoga practices with modern techniques to guide individuals toward physical and mental harmony. With a deep understanding of alternative medicine, I incorporate natural healing methods into my teachings, promoting overall wellness.
+              </p>
+              
+              <p className="mb-4 text-sm leading-relaxed">
+                As a life coach, I empower others to unlock their full potential, offering guidance on personal development, physical well-being, and achieving a balanced life.
+              </p>
+              
               <p className="text-sm leading-relaxed">
-                At L. Montgomery, our mission is to redefine wellness by providing comprehensive consultancy services
-                that focus on personalized and holistic solutions. We believe in empowering individuals to take control
-                of their health journey and embrace a lifestyle that nurtures both the body and mind.
+                Through my multifaceted expertise, I strive to create a supportive and uplifting environment for individuals on their journey to holistic well-being.
               </p>
             </div>
           </div>
@@ -250,7 +249,7 @@ export default function Home() {
 
                   <p  className="mb-2 text-sm italic leading-relaxed">
 
-                    When I joined your yoga class in September, I was having slight backpain, general lethargy, severe PMS and I was finding it particularly hard to concentrate on my studies. Seven months have passed since then and I am delighted to accept that all the above-mentioned problems have waned. It is difficult to describe your dedication towards your students in words. You not only design classes to ensure general well-being of the attendees but you meticulously teach variations of the asanas as per individual’s limitations/problems. Your eagerness to teach asanas and pranayam with correct technique and your insistence on correct posture has spilled positivity beyond the class as well. Now in my daily routine I keep in mind to breathe properly and to maintain good posture. Your instructions about good food habits have also proven to be extremely beneficial. Your subtle but firm way of assertion makes it possible for your students to follow you willingly, for coercion is not what you adhere to. Your positivity, patient persona and calming voice help immensely in concentrating in the yoga class with equal fervor on a daily basis.
+                    When I joined your yoga class in September, I was having slight backpain, general lethargy, severe PMS and I was finding it particularly hard to concentrate on my studies. Seven months have passed since then and I am delighted to accept that all the above-mentioned problems have waned. It is difficult to describe your dedication towards your students in words. You not only design classes to ensure general well-being of the attendees but you meticulously teach variations of the asanas as per individual's limitations/problems. Your eagerness to teach asanas and pranayam with correct technique and your insistence on correct posture has spilled positivity beyond the class as well. Now in my daily routine I keep in mind to breathe properly and to maintain good posture. Your instructions about good food habits have also proven to be extremely beneficial. Your subtle but firm way of assertion makes it possible for your students to follow you willingly, for coercion is not what you adhere to. Your positivity, patient persona and calming voice help immensely in concentrating in the yoga class with equal fervor on a daily basis.
 
                     Best wishes for your future endeavours Sushma. I hope a lot of people benefit from your passion to spread the knowledge of yoga and your enthusiasm to usher in good health to people around you.</p>
                     <p className="mb-2 text-sm italic leading-relaxed">
@@ -420,25 +419,14 @@ export default function Home() {
       <footer className="bg-[rgb(240,236,228)] py-16">
         <div className="container mx-auto px-4">
           <div className="mb-12">
-            <h2 className="text-2xl font-light" style={headingStyle}>L. Montgomery</h2>
+            <h2 className="text-2xl font-light" style={headingStyle}>Aatmik Life Studio</h2>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <p className="text-sm">123-456-7890</p>
-              <p className="text-sm">info@mysite.com</p>
-              <p className="mt-4 text-sm">500 Terry Francine St. San Francisco, CA 94158</p>
-              <div className="mt-4 flex space-x-4">
-                <a href="#" className="text-gray-700 hover:text-gray-900">
-                  <Facebook size={20} />
-                </a>
-                <a href="#" className="text-gray-700 hover:text-gray-900">
-                  <MessageSquare size={20} />
-                </a>
-                <a href="#" className="text-gray-700 hover:text-gray-900">
-                  <Linkedin size={20} />
-                </a>
-              </div>
+              <p className="text-sm">+91 9266155633</p>
+              <p className="text-sm">aatmiklifestudio@gmail.com</p>
+              <p className="mt-4 text-sm">G-081 Enigma Indiabulls, Gurgaon</p>
             </div>
             <div className="flex flex-col items-end space-y-1 text-sm">
               <a href="#" className="hover:underline">
@@ -450,14 +438,11 @@ export default function Home() {
               <a href="#" className="hover:underline">
                 Terms & Conditions
               </a>
-              <a href="#" className="hover:underline">
-                Refund Policy
-              </a>
             </div>
           </div>
 
           <div className="mt-16 text-right text-xs text-gray-600">
-            © 2025 by L. Montgomery. Powered and secured by Wix
+            © 2025 by Aatmik Life Studio. All rights reserved.
           </div>
         </div>
       </footer>
