@@ -81,6 +81,13 @@ ${message}
     window.location.href = mailtoUrl;
   };
 
+  const scrollToJourney = () => {
+    const journeySection = document.querySelector('#journey-section')
+    if (journeySection) {
+      journeySection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <div className="min-h-screen bg-[rgb(235, 240, 225)]">
       {/* Header */}
@@ -145,7 +152,12 @@ ${message}
                   We believe that connecting with your inner self is essential for a balanced and fulfilling life. Our spiritual guidance and contemplative sessions will help you explore your spiritual dimension, nurturing a sense of purpose, inner strength, and tranquility.
                 </p>
                 <div className="flex space-x-4">
-                  <button className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100">Explore More</button>
+                  <button 
+                    onClick={scrollToJourney} 
+                    className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100"
+                  >
+                    Explore More
+                  </button>
                   <button className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100">Contact us</button>
                 </div>
               </div>
@@ -196,10 +208,49 @@ ${message}
       </section>
 
       {/* Process Section */}
-      <section className="bg-[rgb(240,239,225)] py-16">
+      <section id="journey-section" className="bg-[rgb(240,239,225)] py-16">
         <div className="container mx-auto px-4">
           <h2 className="mb-2 text-4xl font-light" style={headingStyle}>Your Journey Starts Here</h2>
           <p className="mb-12 text-sm">Tailored Sessions to Guide, Heal, and Empower</p>
+
+          <div className="mb-12">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="mb-2 text-xl font-light">Aatmik Bliss Retreat</h3>
+                <p className="text-sm text-gray-700">Rejuvenate. Reflect. Realign.</p>
+              </div>
+              <div>
+                <p className="text-sm leading-relaxed">
+                  Escape to the serene foothills of Rishikesh for a soulful wellness retreat. This immersive experience blends ancient yogic practices, guided meditation, breathwork, sound healing, and nature-based therapies to help you reconnect with your inner light. Ideal for those seeking clarity, vitality, and purpose. Open to all levels—no prior experience needed.
+                </p>
+                <p className="mt-2 text-sm">Duration: Multi-day immersive program</p>
+                <p className="text-sm">Inquire for Pricing & Availability</p>
+                <a 
+                  href="/Aatmik-Retreat.pdf" 
+                  download
+                  className="mt-4 inline-flex items-center text-sm text-orange-600 hover:text-orange-700"
+                >
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    className="mr-2 h-5 w-5" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+                    />
+                  </svg>
+                  Download Retreat Brochure
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-300 py-8"></div>
 
           <div className="mb-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
