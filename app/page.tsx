@@ -4,12 +4,15 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Facebook, Linkedin, MessageSquare } from "lucide-react"
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Home() {
   const [headerVisible, setHeaderVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [scrollingDown, setScrollingDown] = useState(false)
   const [hideTimeout, setHideTimeout] = useState<NodeJS.Timeout | null>(null)
+
+  const [formState, handleFormspreeSubmit] = useForm("xzzroeok");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,6 +52,34 @@ export default function Home() {
     fontFamily: 'cormorantgaramond-light, cormorantgaramond, "cormorant garamond", serif',
     fontWeight: '300',
   }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    
+    // Get form values
+    const firstName = formData.get('firstName');
+    const lastName = formData.get('lastName');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const message = formData.get('message');
+
+    // Construct email body
+    const emailBody = `
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone}
+
+Message:
+${message}
+    `.trim();
+
+    // Create mailto URL with encoded parameters
+    const mailtoUrl = `mailto:aatmiklifestudio@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
+
+    // Open default email client
+    window.location.href = mailtoUrl;
+  };
 
   return (
     <div className="min-h-screen bg-[rgb(235, 240, 225)]">
@@ -167,21 +198,21 @@ export default function Home() {
       {/* Process Section */}
       <section className="bg-[rgb(240,239,225)] py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-2 text-4xl font-light" style={headingStyle}>Process</h2>
-          <p className="mb-12 text-sm">Simple and Effective</p>
+          <h2 className="mb-2 text-4xl font-light" style={headingStyle}>Your Journey Starts Here</h2>
+          <p className="mb-12 text-sm">Tailored Sessions to Guide, Heal, and Empower</p>
 
           <div className="mb-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div>
-                <h3 className="mb-2 text-xl font-light">Assessment</h3>
-                <p className="text-sm text-gray-700">Custom Health Evaluation</p>
+                <h3 className="mb-2 text-xl font-light">Life Coaching</h3>
+                <p className="text-sm text-gray-700">Transformative Personal Guidance</p>
               </div>
               <div>
                 <p className="text-sm leading-relaxed">
-                  Our initial assessment involves a detailed analysis of your health status and goals to create a
-                  personalized plan that suits your requirements. We prioritize understanding your needs to provide the
-                  best recommendations for your well-being.
+                  Our life coaching sessions are designed to help you unlock your full potential. Through thoughtful conversation and actionable strategies, we support you in navigating life's challenges and achieving personal clarity.
                 </p>
+                <p className="mt-2 text-sm">Duration: 1 hour</p>
+                <p className="text-sm">Fee: ₹2,999</p>
               </div>
             </div>
           </div>
@@ -191,14 +222,15 @@ export default function Home() {
           <div className="mb-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div>
-                <h3 className="mb-2 text-xl font-light">Nutrition</h3>
-                <p className="text-sm text-gray-700">Personalized Meal Plans</p>
+                <h3 className="mb-2 text-xl font-light">Crisis Management</h3>
+                <p className="text-sm text-gray-700">Immediate Support in Difficult Times</p>
               </div>
               <div>
                 <p className="text-sm leading-relaxed">
-                  Nutrition plans are tailored to meet your dietary preferences and health objectives. We focus on
-                  creating balanced and sustainable meal plans that support your overall health and well-being.
+                  Get professional support during emotional or situational crises. This session provides you with the tools and clarity needed to handle high-stress moments with strength and balance.
                 </p>
+                <p className="mt-2 text-sm">Duration: 1 hour</p>
+                <p className="text-sm">Fee: ₹2,999</p>
               </div>
             </div>
           </div>
@@ -208,15 +240,69 @@ export default function Home() {
           <div className="mb-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div>
-                <h3 className="mb-2 text-xl font-light">Coaching</h3>
-                <p className="text-sm text-gray-700">Guidance and Support</p>
+                <h3 className="mb-2 text-xl font-light">Initial Advice & Consultation</h3>
+                <p className="text-sm text-gray-700">Start Your Journey with Expert Insight</p>
               </div>
               <div>
                 <p className="text-sm leading-relaxed">
-                  Our lifestyle coaching sessions aim to motivate and inspire you towards a healthier lifestyle. We
-                  provide guidance on mindfulness, stress management, and physical fitness, all personalized to help you
-                  achieve your well-being goals.
+                  A focused 15-minute session ideal for first-time clients. Share your concerns, receive immediate guidance, and discover how our services can benefit you.
                 </p>
+                <p className="mt-2 text-sm">Duration: 15 minutes</p>
+                <p className="text-sm">Fee: ₹499</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-300 py-8"></div>
+
+          <div className="mb-12">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="mb-2 text-xl font-light">Follow-Up Session</h3>
+                <p className="text-sm text-gray-700">Continued Support for Ongoing Clients</p>
+              </div>
+              <div>
+                <p className="text-sm leading-relaxed">
+                  Designed for returning clients, this session allows us to build on previous work, track progress, and refine your strategy for continued growth and support.
+                </p>
+                <p className="mt-2 text-sm">Duration: 1 hour</p>
+                <p className="text-sm">Fee: ₹2,499</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-300 py-8"></div>
+
+          <div className="mb-12">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="mb-2 text-xl font-light">Spiritual Tour Planning</h3>
+                <p className="text-sm text-gray-700">Curated Experiences for the Soul</p>
+              </div>
+              <div>
+                <p className="text-sm leading-relaxed">
+                  Let us help you plan spiritually enriching and adventurous journeys. We blend travel with meaning to create memorable, soul-refreshing itineraries tailored to your interests.
+                </p>
+                <p className="mt-2 text-sm">Duration: 1 hour</p>
+                <p className="text-sm">Fee: ₹499</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-300 py-8"></div>
+
+          <div className="mb-12">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="mb-2 text-xl font-light">Online Personal Yoga Session</h3>
+                <p className="text-sm text-gray-700">One-on-One Guided Practice</p>
+              </div>
+              <div>
+                <p className="text-sm leading-relaxed">
+                  Experience a personalized yoga session from the comfort of your home. Tailored to your level and goals, these sessions promote physical strength, flexibility, and inner peace.
+                </p>
+                <p className="mt-2 text-sm">Duration: 1 hour</p>
+                <p className="text-sm">Fee: ₹999</p>
               </div>
             </div>
           </div>
@@ -411,7 +497,10 @@ export default function Home() {
                     className="w-full border-b border-[rgb(240,239,225)] bg-transparent py-2 text-[rgb(240,239,225)] placeholder-[rgb(240,239,225)] focus:border-[rgb(240,239,225)] focus:outline-none"
                   ></textarea>
                 </div>
-                <button type="submit" className="w-full border border-[rgb(240,239,225)] py-3 text-center text-sm text-[rgb(240,239,225)] hover:bg-[rgb(240,239,225)] hover:text-gray-800">
+                <button 
+                  type="submit" 
+                  className="w-full border border-[rgb(240,239,225)] py-3 text-center text-sm text-[rgb(240,239,225)] hover:bg-[rgb(240,239,225)] hover:text-gray-800"
+                >
                   Submit
                 </button>
               </form>
