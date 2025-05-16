@@ -68,7 +68,12 @@ export default function Home() {
             />
           </div>
           <div className="text-center">
-            <h2 className="text-lg" style={headingStyle}>Aatmik Life Studio</h2>
+            <h1 
+              className="text-4xl text-orange-600" 
+              style={headingStyle}
+            >
+              Aatmik Life Studio
+            </h1>
           </div>
           <div>
             {/* <button className="text-gray-700">+Menu</button> */}
@@ -86,7 +91,7 @@ export default function Home() {
                 style={{
                   fontFamily: 'cormorantgaramond-light, cormorantgaramond, "cormorant garamond", serif',
                   letterSpacing: '0.04em',
-                  fontSize: '90px',
+                  fontSize: '50px',
                   fontWeight: '300',
                   textAnchor: 'middle',
                   direction: 'ltr',
@@ -336,7 +341,7 @@ export default function Home() {
               <h2 className="mb-4 text-4xl font-light text-[rgb(240,239,225)]" style={headingStyle}>Leave Us a Message and We'll Get Back to You</h2>
             </div>
             <div>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="firstName" className="mb-1 block text-sm text-[rgb(240,239,225)]">
                     First name *
