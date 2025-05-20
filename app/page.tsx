@@ -158,16 +158,23 @@ ${message}
                   >
                     Explore More
                   </button>
-                  <button className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100">Contact us</button>
+                  <a 
+                    href="https://calendly.com/aatmiklifestudio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100 cursor-pointer"
+                  >
+                    Contact us
+                  </a>
                 </div>
               </div>
               <div className="flex items-center justify-center h-[800px]">
                 <Image
-                  src="/pexels-olia-danilevich-8964938.jpg"
+                  src="/yoga.jpg"
                   alt="Woman meditating"
                   width={300}
                   height={600}
-                  className="rounded-md object-cover rotate-90 w-full h-[600px]"
+                  className="rounded-md object-cover  w-full h-[600px]"
                 />
               </div>
             </div>

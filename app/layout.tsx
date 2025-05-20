@@ -7,7 +7,13 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Wellness Consultant | Smart Website Template | WIX",
   description: "L. Montgomery Wellness Consultant Website",
-    generator: 'v0.dev'
+  icons: {
+    icon: {
+      url: '/icon-tab.jpg',
+      sizes: '128x128',
+    },
+  },
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
