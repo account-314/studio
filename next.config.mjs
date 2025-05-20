@@ -5,6 +5,16 @@ const nextConfig = {
   assetPrefix: '/studio/',
   images: {
     unoptimized: true,
+  },
+  // Add this to ensure styles are included
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+    return config;
+  },
+  // Disable image optimization
+  images: {
+    unoptimized: true,
+    domains: ['localhost'],
     loader: 'custom',
     loaderFile: './image-loader.js',
   },
