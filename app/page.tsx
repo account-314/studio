@@ -98,7 +98,7 @@ ${message}
         <div className="container mx-auto flex items-center justify-between px-4 py-7">
           <div>
             <Image
-              src="/icon.png"
+              src="/studio/icon.png"
               alt="icon"
               width={64}
               height={64}
@@ -170,7 +170,7 @@ ${message}
               </div>
               <div className="flex items-center justify-center h-[800px]">
                 <Image
-                  src="/yoga.jpg"
+                  src="/studio/yoga.jpg"
                   alt="Woman meditating"
                   width={300}
                   height={600}
@@ -188,7 +188,7 @@ ${message}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
               <Image
-                src="/IMG_2418.JPEG"
+                src="/studio/IMG_2418.JPEG"
                 alt="Stacked stones"
                 width={800}
                 height={600}
@@ -469,7 +469,7 @@ ${message}
       <section className="bg-[rgb(240,239,225)]">
         <div className="w-full h-screen">
           <Image
-            src="/pexels-yaroslav-shuraev-4938111.jpg"
+            src="/studio/pexels-yaroslav-shuraev-4938111.jpg"
             alt="Healthy food display"
             width={1920}
             height={1080}
@@ -521,7 +521,7 @@ ${message}
       <section className="py-16 bg-[rgb(240,239,225)] relative">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/pexels-taryn-elliott-7565936.jpg"
+            src="/studio/pexels-taryn-elliott-7565936.jpg"
             alt="Fruit bowl background"
             fill
             className="object-cover"
