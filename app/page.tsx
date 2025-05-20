@@ -95,7 +95,7 @@ ${message}
         className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 bg-[rgb(240,239,225)] border-b border-gray-200"
         style={{ transform: headerVisible ? "translateY(0)" : "translateY(-100%)" }}
       >
-        <div className="container mx-auto flex items-center justify-between px-4 py-10">
+        <div className="container mx-auto flex items-center justify-between px-4 py-7">
           <div>
             <Image
               src="/icon.png"
@@ -105,9 +105,9 @@ ${message}
               className="text-gray-700"
             />
           </div>
-          <div className="text-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2">
             <h1 
-              className="text-4xl text-orange-600" 
+              className="text-3xl text-orange-600" 
               style={headingStyle}
             >
               Aatmik Life Studio
@@ -120,7 +120,7 @@ ${message}
       </header>
 
       {/* Hero Section */}
-      <section className="bg-[rgb(240,239,225)] py-16 pt-[187px]">
+      <section className="bg-[rgb(240,239,225)] py-16 pt-[180px]">
         <div className="container mx-auto px-4">
           <div className="flex flex-col">
             <div className="mb-8">
@@ -271,6 +271,14 @@ ${message}
                 </p>
                 <p className="mt-2 text-sm">Duration: 1 hour</p>
                 <p className="text-sm">Fee: ₹2,999</p>
+                <a 
+                  href="https://calendly.com/aatmiklifestudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100"
+                >
+                  Book Now
+                </a>
               </div>
             </div>
           </div>
@@ -289,6 +297,14 @@ ${message}
                 </p>
                 <p className="mt-2 text-sm">Duration: 1 hour</p>
                 <p className="text-sm">Fee: ₹2,999</p>
+                <a 
+                  href="https://calendly.com/aatmiklifestudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100"
+                >
+                  Book Now
+                </a>
               </div>
             </div>
           </div>
@@ -307,6 +323,14 @@ ${message}
                 </p>
                 <p className="mt-2 text-sm">Duration: 15 minutes</p>
                 <p className="text-sm">Fee: ₹499</p>
+                <a 
+                  href="https://calendly.com/aatmiklifestudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100"
+                >
+                  Book Now
+                </a>
               </div>
             </div>
           </div>
@@ -325,6 +349,14 @@ ${message}
                 </p>
                 <p className="mt-2 text-sm">Duration: 1 hour</p>
                 <p className="text-sm">Fee: ₹2,499</p>
+                <a 
+                  href="https://calendly.com/aatmiklifestudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100"
+                >
+                  Book Now
+                </a>
               </div>
             </div>
           </div>
@@ -343,6 +375,14 @@ ${message}
                 </p>
                 <p className="mt-2 text-sm">Duration: 1 hour</p>
                 <p className="text-sm">Fee: ₹499</p>
+                <a 
+                  href="https://calendly.com/aatmiklifestudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100"
+                >
+                  Book Now
+                </a>
               </div>
             </div>
           </div>
@@ -361,6 +401,14 @@ ${message}
                 </p>
                 <p className="mt-2 text-sm">Duration: 1 hour</p>
                 <p className="text-sm">Fee: ₹999</p>
+                <a 
+                  href="https://calendly.com/aatmiklifestudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block border border-gray-800 px-6 py-2 text-sm hover:bg-gray-100"
+                >
+                  Book Now
+                </a>
               </div>
             </div>
           </div>
