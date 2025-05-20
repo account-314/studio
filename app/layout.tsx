@@ -5,8 +5,7 @@ import { Inter } from "next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Wellness Consultant | Smart Website Template | WIX",
-  description: "L. Montgomery Wellness Consultant Website",
+  title: "Aatmik Life Studio",
   icons: {
     icon: {
       url: '/icon-tab.jpg',
